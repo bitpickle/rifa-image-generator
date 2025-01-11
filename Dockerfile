@@ -1,5 +1,8 @@
-FROM oven/bun:latest
+FROM ghcr.io/puppeteer/puppeteer:latest
 WORKDIR /app
+
+USER root
+RUN npm install -g bun
 
 COPY package.json ./
 COPY bun.lockb ./
